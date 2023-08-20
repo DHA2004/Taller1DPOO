@@ -63,7 +63,9 @@ public class ConsolaOlimpicos
 				else if (opcion_seleccionada == 12 && calculadora != null)
 					ejecutarPorcentajeMedallistas();
 				else if (opcion_seleccionada == 13 && calculadora != null)
-					ejecutarpaisRepresentado();
+					{String nombre = input("Digite el nombre que desea ver: ");
+					ejecutarpaisRepresentado(nombre);}
+					
 				else if (opcion_seleccionada == 14)
 				{
 					System.out.println("Saliendo de la aplicación ...");
@@ -108,15 +110,13 @@ public class ConsolaOlimpicos
 		System.out.println("14. Salir de la aplicación\n");
 	}
 	/**
-	 * Le muestra el usuario el porcentaje de atletas que son medallistas
+	 * Le muestra al usuario Pais que representa el atleta
 	 */
-	private void ejecutarpaisRepresentado()
+	
+	private void ejecutarpaisRepresentado(String nombre)
 	{
-		System.out.println("\n" + "El país representado por el atleta" + "\n");
-
-		
-		
-		
+		String pais = calculadora.paisRepresentado(nombre);
+		System.out.println("\n" + "El país representado por el atleta " + nombre + " es " + pais + "\n");		
 	}
 
 	/**
@@ -446,5 +446,5 @@ public class ConsolaOlimpicos
 		ConsolaOlimpicos consola = new ConsolaOlimpicos();
 		consola.ejecutarAplicacion();
 	}
-
+	
 }

@@ -443,5 +443,15 @@ public class CalculadoraEstadisticas
 
 		return nombres;
 	}
+	
+	public String paisRepresentado(String nombre) {
+		
+		Atleta objetoA = buscarAtleta(nombre);
+		Pais objetoP = objetoA.darPais();
+		String p = objetoP.darNombre();
+		
+		return p;
+		
+	}
 
 }
